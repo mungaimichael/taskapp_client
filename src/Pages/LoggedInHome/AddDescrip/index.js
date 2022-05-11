@@ -42,6 +42,8 @@ const AddDescription = () => {
         }
       );
       const tasks = await res.data;
+      settasksArray(tasks);
+
       return tasks;
     } catch (err) {
       console.log(err.message);
@@ -79,8 +81,7 @@ const AddDescription = () => {
         sx={{ margin: "2rem", width: "83%", height: "80px" }}
         variant={task === "" || description === "" ? "disabled" : "contained"}
         onClick={async () => {
-          const tasks = await fetchTasks();
-          settasksArray(tasks);
+          await fetchTasks();
           addTask(taskObj);
           setdescription("");
           settask("");

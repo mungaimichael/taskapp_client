@@ -16,9 +16,9 @@ const Header = () => {
   useEffect(() => {
     if (location.pathname === "/taskmern/home") {
       setnavbarToggle(false);
-      console.log(location.pathname);
+      // console.log(location.pathname);
     } else {
-      console.log(location.pathname);
+      // console.log(location.pathname);
 
       setnavbarToggle(true);
     }

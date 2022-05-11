@@ -9,8 +9,6 @@ export const LoginWrapper = styled.div`
   background: black;
 `;
 
-export const LoginFormWrapper = styled(LoginWrapper)``;
-
 export const LoginTextFieldsWrapper = styled.div`
   height: 200px;
   width: 100%;
@@ -23,8 +21,7 @@ export const LoginForm = styled.form`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 400px;
-  height: 600px;
+  width: 500px;
+  height: 650px;
   background: white;
-  outline: 4px solid #3c9e63;
 `;

@@ -17,7 +17,7 @@ export const NavBar = styled.nav`
 `;
 export const SiteName = styled(Link)`
   text-decoration: none;
-  font-family: Poppins;
+  font-family: Montserrat;
   font-weight: 900;
   color: white;
   margin: 0 2rem;
@@ -34,7 +34,7 @@ export const NavBtnContainer = styled(NavBar)`
 `;
 
 export const NavLogin = styled(Link)`
-  font-family: Poppins;
+  font-family: "Noto Sans CJK HK";
   font-weight: 900;
   color: white;
   margin: 0 2rem;
@@ -49,7 +49,7 @@ export const NavButton = styled.button`
   border: 0;
   font-size: 1.6rem;
   font-weight: 900;
-  font-family: Poppins;
+  font-family: "Noto Sans CJK HK";
   color: white;
 
   &:hover {

@@ -13,8 +13,11 @@ const Hero = () => {
       <HeroContentWrapper>
         <HeroImageWrap></HeroImageWrap>
         <HeroTextWrapper>
-          <HeroText>
-            a normal person tool to help you
+          <HeroText
+            variant="h2"
+            sx={{ fontWeight: "bolder", fontSize: "5rem" }}
+          >
+            a normal person tool to help
             <span> better manage</span> your daily tasks
           </HeroText>
         </HeroTextWrapper>

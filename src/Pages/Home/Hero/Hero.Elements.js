@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
@@ -30,13 +31,12 @@ export const HeroTextWrapper = styled.div`
   align-items: center;
 `;
 
-export const HeroText = styled.h3`
-  font-family: Poppins;
-  font-weight: 900;
-  width: 45%;
-  font-size: 3rem;
+export const HeroText = styled(Typography)`
+  width: 60%;
+  text-transform: capitalize;
   color: white;
   padding: 1rem;
+  letter-spacing: 0.1rem;
 
   span {
     color: #3c9e63;

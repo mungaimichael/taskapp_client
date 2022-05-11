@@ -9,6 +9,7 @@ const useStyles = makeStyles({
   input: {
     marginTop: ".2rem",
     padding: ".3rem",
+    width: "300px",
   },
 });
 
@@ -45,7 +46,9 @@ const Form = () => {
           registerUser(event, username, password);
         }}
       >
-        <Typography style={{ fontWeight: "bold", color: "white" }}>
+        <Typography
+          sx={{ fontWeight: "bold", color: "white", fontFamily: "Montserrat" }}
+        >
           REGISTER
         </Typography>
         <LoginSharp style={{ color: "white" }} />

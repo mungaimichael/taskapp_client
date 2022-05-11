@@ -18,9 +18,11 @@ import LoggedInHomePage from "./Pages/LoggedInHome";
 import { TaskContextProvider } from "./Contexts/textContext";
 
 // import NeedAuthRoutes from "./NeedAuthRoutes";,.
+
+const font = "Montserrat";
 const theme = createTheme({
   typography: {
-    fontFamily: "Quicksand",
+    fontFamily: font,
   },
   palette: {
     primary: green,

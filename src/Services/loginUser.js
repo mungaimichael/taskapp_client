@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const loginUser = async (event, username, password) => {
-  event.preventDefault();
-
+const loginUser = async (username, password) => {
   try {
     const response = await axios.post(
       "http://localhost:8086/api/taskmern/login",
@@ -15,6 +13,7 @@ const loginUser = async (event, username, password) => {
       // store token
       localStorage.setItem("access_token", user.access_token);
       window.location.href = "/taskmern/home";
+      return user;
     }
   } catch (error) {
     console.log(error);
