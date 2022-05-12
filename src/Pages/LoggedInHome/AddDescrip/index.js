@@ -62,7 +62,7 @@ const AddDescription = () => {
         }}
       />
       <FormControlLabel
-        sx={{ marginLeft: "3rem" }}
+        sx={{ marginLeft: "3rem", fontWeight: "200" }}
         control={
           <Checkbox
             defaultChecked
@@ -81,12 +81,12 @@ const AddDescription = () => {
         onClick={async () => {
           addTask(taskObj);
           const tasks = await fetchTasks();
-          settasksArray([...tasksArray, ...tasks]);
+          settasksArray(...tasks);
           setdescription("");
           settask("");
         }}
       >
-        <BtnText sx={{ fontSize: "1.7rem", fontWeight: "bold" }}>
+        <BtnText sx={{ fontSize: "1.7rem", fontWeight: "900" }}>
           add task
         </BtnText>
       </Button>
