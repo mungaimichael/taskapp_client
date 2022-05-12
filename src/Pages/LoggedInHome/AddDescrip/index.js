@@ -42,8 +42,6 @@ const AddDescription = () => {
         }
       );
       const tasks = await res.data;
-      settasksArray(tasks);
-
       return tasks;
     } catch (err) {
       console.log(err.message);
@@ -64,7 +62,7 @@ const AddDescription = () => {
         }}
       />
       <FormControlLabel
-        sx={{ marginLeft: "3rem", fontWeight: "bold" }}
+        sx={{ marginLeft: "3rem" }}
         control={
           <Checkbox
             defaultChecked
@@ -81,8 +79,9 @@ const AddDescription = () => {
         sx={{ margin: "2rem", width: "83%", height: "80px" }}
         variant={task === "" || description === "" ? "disabled" : "contained"}
         onClick={async () => {
-          await fetchTasks();
           addTask(taskObj);
+          const tasks = await fetchTasks();
+          settasksArray([...tasksArray, ...tasks]);
           setdescription("");
           settask("");
         }}
