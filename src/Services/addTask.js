@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const addTask = async (todoObj) => {
+  const BASE_URL = "https://mungai-taskmern-server.herokuapp.com";
+
   try {
     const { task, description, priority } = todoObj;
 
@@ -8,7 +10,7 @@ const addTask = async (todoObj) => {
     let token = localStorage.getItem("access_token");
 
     const res = await axios.post(
-      "http://localhost:8086/api/taskmern/tasks/addtask",
+      `${BASE_URL}/api/taskmern/tasks/addtask`,
       {
         task,
         description,

@@ -1,11 +1,13 @@
 import axios from "axios";
 
 const loginUser = async (username, password) => {
+  const BASE_URL = "https://mungai-taskmern-server.herokuapp.com";
+
   try {
-    const response = await axios.post(
-      "http://localhost:8086/api/taskmern/login",
-      { username, password }
-    );
+    const response = await axios.post(`${BASE_URL}/api/taskmern/login`, {
+      username,
+      password,
+    });
     const user = await response.data;
     console.log(user);
     // if user credentials match, automatically log in user
